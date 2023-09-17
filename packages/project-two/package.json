@@ -1,0 +1,41 @@
+{
+  "name": "project-two",
+  "version": "1.0.20",
+  "description": "",
+  "targets": {
+    "client": {
+      "source": "index.html",
+      "distDir": "./dist"
+    }
+  },
+  "scripts": {
+    "start": "parcel index.html -p 8000",
+    "clean": "npx rimraf dist",
+    "build": "parcel build --target client",
+    "test": "mocha -r tsx test/**_test.ts --exit --timeout 15000"
+  },
+  "author": "Nathan Wilcox",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/colyseus/create-colyseus/issues"
+  },
+  "homepage": "https://github.com/colyseus/create-colyseus#readme",
+  "devDependencies": {
+    "@parcel/core": "^2.9.3",
+    "@types/config": "^3.3.0",
+    "@types/express": "^4.17.1",
+    "@types/mocha": "^10.0.1",
+    "events": "^3.3.0",
+    "mocha": "^10.2.0",
+    "parcel": "^2.9.3",
+    "path-browserify": "^1.0.1",
+    "rimraf": "^5.0.0",
+    "tsx": "^3.12.6",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "project-one": "*",
+    "express": "^4.18.2",
+    "phaser": "^3.60.0"
+  }
+}
